@@ -8,6 +8,7 @@ import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
+
 public class DashboardController {
 
     @FXML
@@ -20,22 +21,22 @@ public class DashboardController {
 
     @FXML
     private void handleTempoReal(ActionEvent event) {
-        // Load Tempo Real view
+        loadView("tempo-real-view.fxml");
     }
 
     @FXML
     private void handleRelatorio(ActionEvent event) {
-        // Load Relatório view
+        loadView("relatorio-view.fxml");
     }
 
     @FXML
     private void handleSair(ActionEvent event) {
-        // Implement logout functionality
+        System.exit(0);
     }
 
-    private void loadView(String fxml) {
+    private void loadView(String fxmlFile) {
         try {
-            BorderPane pane = FXMLLoader.load(getClass().getResource(fxml));
+            BorderPane pane = FXMLLoader.load(getClass().getResource(fxmlFile));
             mainPane.setCenter(pane);
         } catch (IOException e) {
             e.printStackTrace();

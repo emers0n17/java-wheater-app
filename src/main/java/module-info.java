@@ -6,6 +6,7 @@ module com.wheater.tempo_aplicativo {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
+    requires org.json;
 
     opens com.wheater.tempo_aplicativo to javafx.fxml;
     exports com.wheater.tempo_aplicativo;
